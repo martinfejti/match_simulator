@@ -505,36 +505,19 @@ public class SerieA2006Season {
     }
     
     public static Team createMessina() {
-        List<Player> playerList = new ArrayList<Player>();
-        
-        Player keeper = new Player("Gazzoli", "GKP", 80, 0, 0);
-        
-        Player def1 = new Player("Rafael", "DEF", 72, 0.23, 0.56);
-        Player def2 = new Player("Zoro", "DEF", 59, 0.39, 0.47);
-        Player def3 = new Player("Cristante", "DEF", 64, 0.34, 0.54);
-        Player def4 = new Player("Razaei", "DEF", 72, 0.48, 0.68);
-        
-        Player mid2 = new Player("Donati", "MID", 65, 0.41, 0.57);
-        Player mid1 = new Player("D'Agostino", "MID", 67, 0.54, 0.48);
-        Player mid3 = new Player("Morelli", "MID", 61, 0.44, 0.42);
-        
-        Player for1 = new Player("Zampagna", "FOR", 72, 0.80, 0.61);
-        Player for2 = new Player("Sculli", "FOR", 71, 0.70, 0.59);
-        Player for3 = new Player("Yanagisawa", "FOR", 63, 0.44, 0.58);
-        
-        playerList.add(keeper);
-        playerList.add(def1);
-        playerList.add(def2);
-        playerList.add(def3);
-        playerList.add(def4);
-        playerList.add(mid1);
-        playerList.add(mid2);
-        playerList.add(mid3);
-        playerList.add(for1);
-        playerList.add(for2);
-        playerList.add(for3);
-        
-        return new Team("Messina", playerList);
+        return new Team("Messina", Arrays.asList(
+                new Player("Gazzoli", "GKP", 80, 0, 0),
+                new Player("Rafael", "DEF", 72, 0.23, 0.56),
+                new Player("Zoro", "DEF", 59, 0.39, 0.47),
+                new Player("Cristante", "DEF", 64, 0.34, 0.54),
+                new Player("Razaei", "DEF", 72, 0.48, 0.68),
+                new Player("Donati", "MID", 65, 0.41, 0.57),
+                new Player("D'Agostino", "MID", 67, 0.54, 0.48),
+                new Player("Morelli", "MID", 61, 0.44, 0.42),
+                new Player("Cucciari", "MID", 60, 0.62, 0.57),
+                new Player("Sculli", "MID", 71, 0.70, 0.59),
+                new Player("Zampagna", "FOR", 72, 0.80, 0.61)
+        ));
     }
     
     public static Team createLivorno() {

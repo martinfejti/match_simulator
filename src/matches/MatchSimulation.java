@@ -247,38 +247,44 @@ public class MatchSimulation {
     */
     private static double getTeamForwardsAvg(Team team) {
         double teamForwardsAvgSum = 0;
+        int numberOfForwards = 0;
         
         for (int i = 0; i < team.getListOfPlayers().size(); i++) {
             if (team.getListOfPlayers().get(i).getPosition().equals("FOR")) {
                 teamForwardsAvgSum += team.getListOfPlayers().get(i).getOverall();
+                numberOfForwards++;
             }
         }
         
-        return teamForwardsAvgSum/3;
+        return teamForwardsAvgSum/numberOfForwards;
     }
     
     private static double getTeamMidfieldersAvg(Team team) {
         double teamMidfieldersAvgSum = 0;
+        int numberOfMidfielders = 0;
         
         for (int i = 0; i < team.getListOfPlayers().size(); i++) {
             if (team.getListOfPlayers().get(i).getPosition().equals("MID")) {
                 teamMidfieldersAvgSum += team.getListOfPlayers().get(i).getOverall();
+                numberOfMidfielders++;
             }
         }
         
-        return teamMidfieldersAvgSum/3;
+        return teamMidfieldersAvgSum/numberOfMidfielders;
     }
     
     private static double getTeamDefendersAvg(Team team) {
         double teamDefendersAvgSum = 0;
+        int numberOfDefenders = 0;
         
         for (int i = 0; i < team.getListOfPlayers().size(); i++) {
             if (team.getListOfPlayers().get(i).getPosition().equals("DEF")) {
                 teamDefendersAvgSum += team.getListOfPlayers().get(i).getOverall();
+                numberOfDefenders++;
             }
         }
         
-        return teamDefendersAvgSum/4;
+        return teamDefendersAvgSum/numberOfDefenders;
     }
     
     private static int calculateNumberOfBigChances(double forAvg, double midAvg, double defAvg) {
